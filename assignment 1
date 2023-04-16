@@ -1,0 +1,26 @@
+To find the index of the Current Index Member in the New Task Queue, we can follow these steps:
+
+Find the Current Index Member in the Old Task Queue.
+Count the number of members in the Old Task Queue that come before the Current Index Member.
+Count the number of inactive members in the Old Task Queue that come before the Current Index Member. These members will be removed from the New Task Queue.
+Find the new index of the Current Index Member in the New Task Queue by adding the result of step 2 to the result of step 3. If the Current Index Member is inactive in the New Task Queue, find the index of the next available member to the Current Index Member.
+Let's apply these steps to the example given:
+
+Task Queue: [A B C D E F A* B C D A B C A B A]
+Current Index: 7
+Current Index Member: 2nd A (marked as A*)
+
+New Task Queue: [B C E F B C B C B]
+
+The Current Index Member in the Old Task Queue is the 2nd A (marked as A*).
+There are 6 members in the Old Task Queue that come before the Current Index Member (A B C D E F).
+There are 2 inactive members in the Old Task Queue that come before the Current Index Member (A and D).
+The new index of the Current Index Member in the New Task Queue is: 6 (from step 2) + 2 (from step 3) = 8.
+However, since the Current Index Member (2nd A) is inactive in the New Task Queue, we need to find the index of the next available member to the Current Index Member. The next available member after the 2nd A is the 2nd B (marked as B*) at index 5 of the new queue.
+
+Therefore, the index of the Current Index Member in the New Task Queue is 5 + 6 + 1 = 12.
+
+
+
+
+
